@@ -1,8 +1,10 @@
 #include <Arduino.h>
 #include "task1.h"
 
-static void switchVariables(?,?){
-    // ?
+static void switchVariables(uint32_t *padata,uint32_t *pbdata)
+{
+    *padata = 20
+    *pbdata = 10
 }
 
 static void printVar(const char *varName, uint32_t value)
@@ -38,7 +40,9 @@ void task1()
             uint32_t b = 20;
             printVar("a", a);
             printVar("b", b);
-            switchVariables(?,?);
+            uint32_t *pa = &a;
+            uint32_t *pb = &b;
+            switchVariables(a,b);
             printVar("a", a);
             printVar("b", b);
         }
